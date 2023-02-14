@@ -7,7 +7,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:3000/empleados/", requestOptions)
+fetch("https://nodejsapisiva-production.up.railway.app/empleados/", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -34,7 +34,7 @@ function  PostPeticion(){
       redirect: 'follow'
     };
     
-    fetch("http://localhost:3000/empleados/", requestOptions)
+    fetch("https://nodejsapisiva-production.up.railway.app/empleados/", requestOptions)
       .then(response => response.text())
       .then(result => console.log(result))
       .catch(error => console.log('error', error));
@@ -42,7 +42,7 @@ function  PostPeticion(){
 
 function  SGetPeticion(){	
 	var id = document.getElementById('id').value;
-    var url = 'http://localhost:3000/empleados/' + id;
+    var url = 'https://nodejsapisiva-production.up.railway.app/' + id;
 
     var requestOptions = {
       method: 'GET',
@@ -78,7 +78,7 @@ function  inicioSession(){
         const inicioS = async() => {
 
             try {
-                const tacodepastor = await fetch("http://localhost:3000/empleados/inicioSession", requestOptions)
+                const tacodepastor = await fetch("https://nodejsapisiva-production.up.railway.app/empleados/inicioSession", requestOptions)
             console.log(tacodepastor.status)
             
             const datos = await tacodepastor.json();

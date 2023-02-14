@@ -5,7 +5,7 @@ const exped = document.querySelector("#expediente").value;
 $("#usuarios").one("click", function () {
 $.ajax({
   type: "GET",
-  url: "http://localhost:3000/empleados/",
+  url: "https://nodejsapisiva-production.up.railway.app/empleados/",
   async: true,
   success: function (datos) {
       let options = "<option value='0' selected disabled>Selecciona un usuario</option>"
