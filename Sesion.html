@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Sesion.css" rel="stylesheet" type="text/css">
+    <title>Bienvenido a SiVA</title>
+
+</head>
+<body>
+        <section class="head" >
+            <img src="./src/logo.png" alt="logo SiVA" >
+            <h1 class="movil" id="bar" style="text-align: center;" onclick="openMenu()"><i class="fa-solid fa-bars"></i></h1>
+            <h1 style="display: none; text-align: center;" id="close" onclick="closeMenu();"><i class="fa-solid fa-xmark"></i></h1>
+        </section>
+        <section class="secciones">
+        <div>
+            <ul class="menu" id="menu">
+                <li id="inicio" onclick="window.location.href='Sesion.html'">
+                    <img src="./src/menu-inicio1.svg" > Inicio
+                </li>
+                <li id="perfil" onclick="window.location.href='perfil.php'">
+                    <img src="./src/menu-perfil1.svg" >Mi Perfil
+                </li>
+                <li id="prospectos" onclick="window.location.href='mis-prospectos.php'">
+                    <img src="./src/menu-prospectos1.svg" > Solicitudes
+                </li>
+                <li id="nueva-cotizacion" onclick="window.location.href='documentos.html'">
+                    <img src="./src/menu-nueva-cotizacion1.svg" > Documentos
+                </li>
+                <li id="ventas" onclick="window.location.href='mis-ventas.php'">
+                    <img src="./src/menu-ventas1.svg"> Aprobaciones
+                </li>
+                <li id="incentivos" onclick="window.location.href='incentivos.php'">
+                    <img src="./src/menu-incentivos1.svg" > Oportunidades
+                </li>
+                <li id="notificaciones" onclick="window.location.href='notificaciones.php'">
+                    <img src="./src/menu-notificaciones1.svg" > Centro de notificaciones
+                </li>
+                <li id="cerrar-sesion" onclick="">
+                    <img src="./src/menu-cerrar-sesion1.svg" > Cerrar sesión
+                </li>
+            </ul>
+    </div>
+    <br>
+    <button class="btn-purple" name="button" onclick="aver();">Busca</button>
+    <br>
+    <button class="btn-purple" name="button" onclick="nover();">desaparece</button>
+    <div class ="logos"><img src="./src/imagenrandom.png" alt="asdad" width="850" height="425"></div>
+</section>
+    
+ 
+</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src ="Sesion.js"></script>
+
+</html>
