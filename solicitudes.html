@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Sesion.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <title>Gestiona los documentos</title>
+
+</head>
+<body>
+        <section class="head" >
+            <img src="./src/logo.png" alt="logo SiVA" >
+            <h1 class="movil" id="bar" style="text-align: center;" onclick="openMenu()"><i class="fa-solid fa-bars"></i></h1>
+            <h1 style="display: none; text-align: center;" id="close" onclick="closeMenu();"><i class="fa-solid fa-xmark"></i></h1>
+        </section>
+        <section class="secciones">
+        <div>
+        <ul class="menu" id="menu">
+            <li id="inicio" onclick="window.location.href='Sesion.html'">
+                <img src="./src/menu-inicio1.svg" > Inicio
+            </li>
+            <li id="perfil" onclick="window.location.href='perfil.php'">
+                <img src="./src/menu-perfil1.svg" >Mi Perfil
+            </li>
+            <li id="prospectos" onclick="window.location.href='mis-prospectos.php'">
+                <img src="./src/menu-prospectos1.svg" > Solicitudes
+            </li>
+            <li id="nueva-cotizacion" onclick="window.location.href='documentos.html'">
+                <img src="./src/menu-nueva-cotizacion1.svg" > Documentos
+            </li>
+            <li id="ventas" onclick="window.location.href='mis-ventas.php'">
+                <img src="./src/menu-ventas1.svg"> Aprobaciones
+            </li>
+            <li id="incentivos" onclick="window.location.href='incentivos.php'">
+                <img src="./src/menu-incentivos1.svg" > Oportunidades
+            </li>
+            <li id="notificaciones" onclick="window.location.href='notificaciones.php'">
+                <img src="./src/menu-notificaciones1.svg" > Centro de notificaciones
+            </li>
+            <li id="cerrar-sesion" onclick="">
+                <img src="./src/menu-cerrar-sesion1.svg" > Cerrar sesión
+            </li>
+        </ul>
+        
+    </div>
+    <div class="">
+        <h2 style="text-align:center">          ¡<span style="text-align:center" id="nombreusuario"></span> Bienvenido a SiVA!</h2>
+        <div class="">
+            <div class="">
+    <label> Monto del prestamo Solicitado</label>
+    <br>
+    <input type="number" min="10000" max="30000" id="monto" placeholder="Monto minimo 10000"></input>  
+    <br>
+    <br>   
+    <label> Tipo de nomina</label> 
+    <br>  
+    <select name="tasa" id="tasa" class="input_form" onclick="" style="width:200px">
+                    <option value="" >Selecciona un plazo</option>
+                    <option value="Semanal">Semanal</option>
+                    <option value="Quincenal">Quincenal</option>
+                    <option value="Mensual">Mensual</option>
+    </select>
+    <br>
+    <br>
+    <label> Cantidad de plazos</label>
+    <br>
+    <input type="text" id="plazos" placeholder="Introduce la cantidad a solicitar"></input>
+    <br>
+    <br>
+    <label> Tasa autorizada</label>
+    <br>
+    <input disabled type="text"  id="monto" placeholder="Tasa del 25%"></input> 
+    <br>
+    <br>
+    <div class="botones">
+    <button class="btn-purple" id="calculadora" name="button" onclick="Calculadora();">Calcula el prestamo</button>
+    <button class="btn-purple" onclick="document.getElementById('id01').style.display='block'" style="border-bottom: 1px solid; cursor: pointer;">Mostrar tabla de amortización</button>
+    </div>
+    <br>
+    
+        </div>
+        
+        
+    </div>
+    
+            </div>
+       
+<br>
+
+        
+    </div>
+    <br>
+    <br>
+    <div>
+        
+    </div>
+</section>
+    
+
+</body>
+<div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom">
+      <div  class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+            <div style="text-align: right;"></div>
+                <br>
+                <br>
+                <div class="head"><img src="./src/logo.png" alt="logo SiVA" ><span style="text-align: center;"> Tabla de amortización</span></div>
+                <br>
+                <span>Monto solicitado:<span id="montosolicitado"></span></span>
+                <span>Plazos: <span id="plzos"></span></span>
+                <span>Pago por plazo:<span id="pplzos"></span></span>
+                <span>Total a Pagar :<span id="totalapagar"></span></span>
+                <br>    
+                <br>
+                <table id="header" style="box-sizing: inherit; " >
+                    <tr >
+                        <td>Num. de Pago----</td>
+                        <td>- ---Amortización--------</td>
+                        <td>----  Intereses ---</td>
+                        <td>---------   Saldo adeudado ---------</td>
+                    </tr>   
+                </table>
+                <div  id="tablitacon" >
+            </div>
+                
+                <br>
+                <button class="btn-purple2" onclick="window.location='Sesion.html'">Inicia tu proceso</button>
+                <button class="btn-purple2" onclick="document.getElementById('id01').style.display='none'">Cancelar</button>
+            </div>
+        </form>
+      </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+      <script src ="solicitudes.js"></script>
+      <script>
+    
+    </script>
+
+</html>
