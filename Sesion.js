@@ -1,6 +1,10 @@
+const usuarioActivo = localStorage.getItem('usuario')
+var usuario = document.getElementById("nombreusuario")
+usuario.innerHTML = usuarioActivo;
+
 function aver() {
 
-  let name = localStorage.getItem('nombre')
+  let name = localStorage.getItem('usuario')
       console.log(name + " Si sirvio en el boton")
 
   const url2 = "http://localhost:3000/empleado/" + name +"1";

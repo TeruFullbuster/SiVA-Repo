@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="Sesion.css" rel="stylesheet" type="text/css">
-    <title>Bienvenido a SiVA</title>
+    <title>Bienvenido a SiVA </title>
 
 </head>
 <body>
@@ -13,7 +13,7 @@
             <img src="./src/logo.png" alt="logo SiVA" >
             <h1 class="movil" id="bar" style="text-align: center;" onclick="openMenu()"><i class="fa-solid fa-bars"></i></h1>
             <h1 style="display: none; text-align: center;" id="close" onclick="closeMenu();"><i class="fa-solid fa-xmark"></i></h1>
-        </section>
+    </section>
         <section class="secciones">
         <div>
             <ul class="menu" id="menu">
@@ -23,7 +23,7 @@
                 <li id="perfil" onclick="window.location.href='perfil.php'">
                     <img src="./src/menu-perfil1.svg" >Mi Perfil
                 </li>
-                <li id="prospectos" onclick="window.location.href='mis-prospectos.php'">
+                <li id="prospectos" onclick="window.location.href='Solicitudes.html'">
                     <img src="./src/menu-prospectos1.svg" > Solicitudes
                 </li>
                 <li id="nueva-cotizacion" onclick="window.location.href='documentos.html'">
@@ -42,14 +42,18 @@
                     <img src="./src/menu-cerrar-sesion1.svg" > Cerrar sesión
                 </li>
             </ul>
-    </div>
-    <br>
-    <button class="btn-purple" name="button" onclick="aver();">Busca</button>
-    <br>
-    <button class="btn-purple" name="button" onclick="nover();">desaparece</button>
-    <div class ="logos"><img src="./src/imagenrandom.png" alt="asdad" width="850" height="425"></div>
-</section>
-    
+        </div>
+        <div class="">
+            
+            <div class ="logos"><img src="./src/imagenrandom.png" alt="asdad" width="850" height="425"></div>
+            <button class="btn-purple" name="button" onclick="aver();">Busca</button>
+        <br>
+        <button class="btn-purple" name="button" onclick="nover();">desaparece</button>
+        <span id="nombreusuario">as</span>
+        </div>
+
+    </section>
+
  
 </body>
 

@@ -98,8 +98,14 @@ function  inicioSession(){
             console.log("Algo No funciona elws");
                 
             }else{
+              localStorage.clear();
 
-                
+              localStorage.setItem('usuario', datos[0].nombre)
+              localStorage.setItem('salario', datos[0].salario)
+
+              console.log(localStorage.getItem('usuario'))
+              console.log(localStorage.getItem('salario'))
+
                 await Swal.fire({
                     icon: 'success',
                     title: 'Inicio de Sesion exitoso',
@@ -115,7 +121,7 @@ function  inicioSession(){
 
         
         
-    }
+      }
     inicioS();
  
 }

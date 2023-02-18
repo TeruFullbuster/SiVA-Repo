@@ -1,6 +1,10 @@
 const select = document.querySelector("#usuarios").value;
 const exped = document.querySelector("#expediente").value;
+const usuarioActivo = localStorage.getItem('usuario')
+var usuario = document.getElementById("nombreusuario")
+usuario.innerHTML = usuarioActivo;
 
+console.log(usuarioActivo)
 
 $("#usuarios").one("click", function () {
 $.ajax({
@@ -12,7 +16,7 @@ $.ajax({
       console.log(datos)
       $.map(datos, function (a) {
           options += ` 
-          <option value="${a.id_usuario}">${a.nombre}</option>
+          <option value="${a.id}">${a.nombre}</option>
          `
       })
 
@@ -25,25 +29,26 @@ $.ajax({
 })
 
 $("#expediente").one("click", function () {
-  const select = document.querySelector("#usuarios").value;
-  const url1 = "http://localhost:3000/documentos/" + select;
+  const agarrado = document.querySelector("#usuarios").value;
+  const url1 = "https://nodejsapisiva-production.up.railway.app/documentos/"+ agarrado +"";
+  console.log(url1)
   $.ajax({
     type: "GET",
     url: url1,
     async: true,
     success: function (datos) {
-
+      console.log(datos)
     var cargaD = document.getElementById("comprobanteDomicilio")
-    cargaD.innerHTML = datos.comprobanteDomicilio
-    var carga1 = document.getElementById("constanciaFiscal")
-    carga1.innerHTML = datos.constanciaFiscal
+    cargaD.innerHTML = datos.CompDomicilio
+    var carga1 = document.getElementById("caratulaEdoC")
+    carga1.innerHTML = datos.caratulaEdoC
     var carga2 = document.getElementById("nominaC")
-    carga2.innerHTML = datos.nominaC
+    carga2.innerHTML = datos.ComNomina
     var carga3 = document.getElementById("clabePer")
-    carga3.innerHTML = datos.clabePer
+    carga3.innerHTML = datos.clabeP
       
 
-      let options = "<option value='0' selected disabled>Selecciona un usuario</option>"
+      /*let options = "<option value='0' selected disabled>Selecciona un usuario</option>"
         $.map(datos, function (a) {
             options += ` 
             <option value="${a.id_usuario}">${a}</option>
@@ -52,7 +57,7 @@ $("#expediente").one("click", function () {
   
         $("#expediente").empty().append(options);
         const aprobado = console.log(datos.aprobadoCdD.data[0])
-        
+        */
         
     }
   }).fail(function (e) {

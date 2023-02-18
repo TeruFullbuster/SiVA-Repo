@@ -49,13 +49,17 @@ table{
 .btn-purple{
 	background: #660eff;
 	border-radius: 20px;
-	font-size: 12pt;
+	font-size: 18pt;
 	border: none;
 	color: #fff;
 	font-weight: 900;
 	cursor: pointer;
 	padding: 10px 5px;
 	width: 25%;
+}
+.botones{
+    grid-template-areas: 50% 50%;
+    position: inherit;
 }
 .btn-purple:hover{
 	background: #660effd9;
@@ -477,9 +481,13 @@ table{
 .btn-purple:hover{
 	background: #660effd9;
 }
-@media (min-width: 993px){
+.menu .active{
+    border-right: 3px solid #3d6ac2;
+    background: #aad1f4;
+}
+@media (min-width: 1000px){
     .w3-modal-content {
-        width: 600px!important;
+        width: 1000px !important;
     }
 }
 @media (max-width: 820px){
